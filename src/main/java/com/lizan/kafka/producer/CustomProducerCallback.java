@@ -30,6 +30,7 @@ public class CustomProducerCallback {
                 KafkaProducer<String, String>(properties);
         // 4. 调用 send 方法,发送消息
         for (int i = 0; i < 5; i++) {
+
             // 添加回调
             kafkaProducer.send(new ProducerRecord<>("first_test",
                     "atguigu " + i), new Callback() {
